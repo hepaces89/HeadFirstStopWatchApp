@@ -52,7 +52,7 @@ public class StopwatchActivity extends Activity {
                 int hours = seconds/3600;
                 int minutes = (seconds%3600)/60;
                 int secs = seconds%60;
-                String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, seconds);
+                String time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
                 timeView.setText(time);
                 if(running){
                     seconds++;
