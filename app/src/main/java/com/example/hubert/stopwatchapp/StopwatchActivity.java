@@ -37,13 +37,26 @@ public class StopwatchActivity extends Activity {
     @Override
     public void onStart(){
         super.onStart();
-        running = wasRunning;
+        //running = wasRunning;
     }
 
     //runs when app becomes hidden but not killed
     @Override
     protected void onStop(){
         super.onStop();
+        //running = false;
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        running = wasRunning;
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        wasRunning = running;
         running = false;
     }
 
