@@ -47,12 +47,14 @@ public class StopwatchActivity extends Activity {
         //running = false;
     }
 
+    //runs when app comes back from being partially in the background due to something like a notification
     @Override
     protected void onResume(){
         super.onResume();
         running = wasRunning;
     }
 
+    //runs when the app goes partially into the background (loses focus) due to something like a notification
     @Override
     protected void onPause(){
         super.onPause();
